@@ -1,0 +1,155 @@
+2026-02-05 14:17:56,229 - INFO - Index(['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines',
+       'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
+       'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract',
+       'PaperlessBilling', 'PaymentMethod', 'SIM_Provider'],
+      dtype='object')
+2026-02-05 14:17:56,229 - INFO - Index(['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines',
+       'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
+       'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract',
+       'PaperlessBilling', 'PaymentMethod', 'SIM_Provider'],
+      dtype='object')
+2026-02-05 14:17:56,229 - INFO - gender -> : ['Female' 'Male']
+2026-02-05 14:17:56,229 - INFO - Partner -> : ['No' 'Yes']
+2026-02-05 14:17:56,229 - INFO - Dependents -> : ['Yes' 'No']
+2026-02-05 14:17:56,229 - INFO - PhoneService -> : ['Yes' 'No']
+2026-02-05 14:17:56,229 - INFO - MultipleLines -> : ['No' 'Yes' 'No phone service']
+2026-02-05 14:17:56,229 - INFO - InternetService -> : ['DSL' 'Fiber optic' 'No']
+2026-02-05 14:17:56,229 - INFO - OnlineSecurity -> : ['Yes' 'No' 'No internet service']
+2026-02-05 14:17:56,229 - INFO - OnlineBackup -> : ['No' 'Yes' 'No internet service']
+2026-02-05 14:17:56,229 - INFO - DeviceProtection -> : ['Yes' 'No' 'No internet service']
+2026-02-05 14:17:56,229 - INFO - TechSupport -> : ['No' 'Yes' 'No internet service']
+2026-02-05 14:17:56,229 - INFO - StreamingTV -> : ['No' 'Yes' 'No internet service']
+2026-02-05 14:17:56,229 - INFO - StreamingMovies -> : ['Yes' 'No' 'No internet service']
+2026-02-05 14:17:56,229 - INFO - Contract -> : ['One year' 'Two year' 'Month-to-month']
+2026-02-05 14:17:56,229 - INFO - PaperlessBilling -> : ['No' 'Yes']
+2026-02-05 14:17:56,229 - INFO - PaymentMethod -> : ['Mailed check' 'Bank transfer (automatic)' 'Electronic check'
+ 'Credit card (automatic)']
+2026-02-05 14:17:56,229 - INFO - SIM_Provider -> : ['Airtel' 'BSNL' 'Jio']
+2026-02-05 14:17:56,229 - INFO - Before Converting : Index(['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines',
+       'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
+       'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract',
+       'PaperlessBilling', 'PaymentMethod', 'SIM_Provider'],
+      dtype='object')
+2026-02-05 14:17:56,229 - INFO - Before Converting : Index(['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines',
+       'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
+       'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract',
+       'PaperlessBilling', 'PaymentMethod', 'SIM_Provider'],
+      dtype='object')
+2026-02-05 14:17:56,262 - INFO - After Converting : Index(['gender_Male', 'Partner_Yes', 'Dependents_Yes', 'PhoneService_Yes',
+       'MultipleLines_No phone service', 'MultipleLines_Yes',
+       'InternetService_Fiber optic', 'InternetService_No',
+       'OnlineSecurity_No internet service', 'OnlineSecurity_Yes',
+       'OnlineBackup_No internet service', 'OnlineBackup_Yes',
+       'DeviceProtection_No internet service', 'DeviceProtection_Yes',
+       'TechSupport_No internet service', 'TechSupport_Yes',
+       'StreamingTV_No internet service', 'StreamingTV_Yes',
+       'StreamingMovies_No internet service', 'StreamingMovies_Yes',
+       'PaperlessBilling_Yes', 'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check',
+       'SIM_Provider_BSNL', 'SIM_Provider_Jio', 'Contract_res'],
+      dtype='object')
+2026-02-05 14:17:56,262 - INFO - After Converting : Index(['gender_Male', 'Partner_Yes', 'Dependents_Yes', 'PhoneService_Yes',
+       'MultipleLines_No phone service', 'MultipleLines_Yes',
+       'InternetService_Fiber optic', 'InternetService_No',
+       'OnlineSecurity_No internet service', 'OnlineSecurity_Yes',
+       'OnlineBackup_No internet service', 'OnlineBackup_Yes',
+       'DeviceProtection_No internet service', 'DeviceProtection_Yes',
+       'TechSupport_No internet service', 'TechSupport_Yes',
+       'StreamingTV_No internet service', 'StreamingTV_Yes',
+       'StreamingMovies_No internet service', 'StreamingMovies_Yes',
+       'PaperlessBilling_Yes', 'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check',
+       'SIM_Provider_BSNL', 'SIM_Provider_Jio', 'Contract_res'],
+      dtype='object')
+2026-02-05 14:17:56,262 - INFO - (5634, 30)
+2026-02-05 14:17:56,262 - INFO - (1409, 30)
+2026-02-05 14:17:56,274 - INFO - tenure                                   0
+MonthlyCharges                           0
+TotalCharges_replaced                    0
+gender_Male                              0
+Partner_Yes                              0
+Dependents_Yes                           0
+PhoneService_Yes                         0
+MultipleLines_No phone service           0
+MultipleLines_Yes                        0
+InternetService_Fiber optic              0
+InternetService_No                       0
+OnlineSecurity_No internet service       0
+OnlineSecurity_Yes                       0
+OnlineBackup_No internet service         0
+OnlineBackup_Yes                         0
+DeviceProtection_No internet service     0
+DeviceProtection_Yes                     0
+TechSupport_No internet service          0
+TechSupport_Yes                          0
+StreamingTV_No internet service          0
+StreamingTV_Yes                          0
+StreamingMovies_No internet service      0
+StreamingMovies_Yes                      0
+PaperlessBilling_Yes                     0
+PaymentMethod_Credit card (automatic)    0
+PaymentMethod_Electronic check           0
+PaymentMethod_Mailed check               0
+SIM_Provider_BSNL                        0
+SIM_Provider_Jio                         0
+Contract_res                             0
+dtype: int64
+2026-02-05 14:17:56,279 - INFO - tenure                                   0
+MonthlyCharges                           0
+TotalCharges_replaced                    0
+gender_Male                              0
+Partner_Yes                              0
+Dependents_Yes                           0
+PhoneService_Yes                         0
+MultipleLines_No phone service           0
+MultipleLines_Yes                        0
+InternetService_Fiber optic              0
+InternetService_No                       0
+OnlineSecurity_No internet service       0
+OnlineSecurity_Yes                       0
+OnlineBackup_No internet service         0
+OnlineBackup_Yes                         0
+DeviceProtection_No internet service     0
+DeviceProtection_Yes                     0
+TechSupport_No internet service          0
+TechSupport_Yes                          0
+StreamingTV_No internet service          0
+StreamingTV_Yes                          0
+StreamingMovies_No internet service      0
+StreamingMovies_Yes                      0
+PaperlessBilling_Yes                     0
+PaymentMethod_Credit card (automatic)    0
+PaymentMethod_Electronic check           0
+PaymentMethod_Mailed check               0
+SIM_Provider_BSNL                        0
+SIM_Provider_Jio                         0
+Contract_res                             0
+dtype: int64
+2026-02-05 14:17:56,279 - INFO - =======================================================
+2026-02-05 14:17:56,280 - INFO - gender_Male -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - Partner_Yes -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - Dependents_Yes -> : [1. 0.]
+2026-02-05 14:17:56,280 - INFO - PhoneService_Yes -> : [1. 0.]
+2026-02-05 14:17:56,280 - INFO - MultipleLines_No phone service -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - MultipleLines_Yes -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - InternetService_Fiber optic -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - InternetService_No -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - OnlineSecurity_No internet service -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - OnlineSecurity_Yes -> : [1. 0.]
+2026-02-05 14:17:56,280 - INFO - OnlineBackup_No internet service -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - OnlineBackup_Yes -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - DeviceProtection_No internet service -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - DeviceProtection_Yes -> : [1. 0.]
+2026-02-05 14:17:56,280 - INFO - TechSupport_No internet service -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - TechSupport_Yes -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - StreamingTV_No internet service -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - StreamingTV_Yes -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - StreamingMovies_No internet service -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - StreamingMovies_Yes -> : [1. 0.]
+2026-02-05 14:17:56,280 - INFO - PaperlessBilling_Yes -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - PaymentMethod_Credit card (automatic) -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - PaymentMethod_Electronic check -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - PaymentMethod_Mailed check -> : [1. 0.]
+2026-02-05 14:17:56,280 - INFO - SIM_Provider_BSNL -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - SIM_Provider_Jio -> : [0. 1.]
+2026-02-05 14:17:56,280 - INFO - Contract_res -> : [1. 2. 0.]

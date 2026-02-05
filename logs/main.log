@@ -1,0 +1,115 @@
+2026-02-05 14:17:56,041 - INFO - Data loded successfully
+2026-02-05 14:17:56,041 - INFO - Total Rows in the data : 7043
+2026-02-05 14:17:56,041 - INFO - Total columns in the data : 22
+2026-02-05 14:17:56,043 - INFO - Before : customerID           0
+gender               0
+SeniorCitizen        0
+Partner              0
+Dependents           0
+tenure               0
+PhoneService         0
+MultipleLines        0
+InternetService      0
+OnlineSecurity       0
+OnlineBackup         0
+DeviceProtection     0
+TechSupport          0
+StreamingTV          0
+StreamingMovies      0
+Contract             0
+PaperlessBilling     0
+PaymentMethod        0
+MonthlyCharges       0
+TotalCharges        11
+Churn                0
+SIM_Provider         0
+dtype: int64
+2026-02-05 14:17:56,051 - INFO - Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'TotalCharges', 'SIM_Provider'],
+      dtype='object')
+2026-02-05 14:17:56,051 - INFO - Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'TotalCharges', 'SIM_Provider'],
+      dtype='object')
+2026-02-05 14:17:56,051 - INFO - 3930     No
+6700     No
+5117     No
+4519     No
+5841    Yes
+Name: Churn, dtype: object
+2026-02-05 14:17:56,051 - INFO - 4739     No
+4257     No
+1158     No
+3773    Yes
+4407     No
+Name: Churn, dtype: object
+2026-02-05 14:17:56,051 - INFO - Training data size : (5634, 20)
+2026-02-05 14:17:56,051 - INFO - Testing data size : (1409, 20)
+2026-02-05 14:17:56,051 - INFO - Before (Train):
+TotalCharges    10
+dtype: int64
+2026-02-05 14:17:56,061 - INFO - Before (Test):
+TotalCharges    1
+dtype: int64
+2026-02-05 14:17:56,077 - INFO - random sample technique applied
+2026-02-05 14:17:56,077 - INFO - After (Train):
+0
+2026-02-05 14:17:56,077 - INFO - After (Train):
+0
+2026-02-05 14:17:56,077 - INFO - Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'SIM_Provider', 'TotalCharges_replaced'],
+      dtype='object')
+2026-02-05 14:17:56,077 - INFO - Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'SIM_Provider', 'TotalCharges_replaced'],
+      dtype='object')
+2026-02-05 14:17:56,077 - INFO - ----------------------------------
+2026-02-05 14:17:56,077 - INFO - Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_replaced'], dtype='object')
+2026-02-05 14:17:56,077 - INFO - Index(['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines',
+       'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
+       'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract',
+       'PaperlessBilling', 'PaymentMethod', 'SIM_Provider'],
+      dtype='object')
+2026-02-05 14:17:56,077 - INFO - Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_replaced'], dtype='object')
+2026-02-05 14:17:56,077 - INFO - Index(['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines',
+       'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
+       'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract',
+       'PaperlessBilling', 'PaymentMethod', 'SIM_Provider'],
+      dtype='object')
+2026-02-05 14:17:56,077 - INFO - (5634, 4)
+2026-02-05 14:17:56,077 - INFO - (5634, 16)
+2026-02-05 14:17:56,077 - INFO - (1409, 4)
+2026-02-05 14:17:56,077 - INFO - (1409, 16)
+2026-02-05 14:17:56,092 - INFO - Index(['SeniorCitizen_minmax_trim', 'tenure_minmax_trim',
+       'MonthlyCharges_minmax_trim', 'TotalCharges_replaced_minmax_trim'],
+      dtype='object') -> (5634, 4)
+2026-02-05 14:17:56,092 - INFO - Index(['SeniorCitizen_minmax_trim', 'tenure_minmax_trim',
+       'MonthlyCharges_minmax_trim', 'TotalCharges_replaced_minmax_trim'],
+      dtype='object') -> (1409, 4)
+2026-02-05 14:17:56,092 - INFO - Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'SIM_Provider', 'TotalCharges_replaced'],
+      dtype='object')
+2026-02-05 14:17:56,092 - INFO - Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'SIM_Provider', 'TotalCharges_replaced'],
+      dtype='object')
+2026-02-05 14:17:56,092 - INFO - ----------------------------------
+2026-02-05 14:17:56,092 - INFO -  Before: Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_replaced'], dtype='object') -> (5634, 4)
+2026-02-05 14:17:56,092 - INFO -  Before: Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_replaced'], dtype='object') -> (1409, 4)
+2026-02-05 14:17:56,229 - INFO -  After: Index(['tenure', 'MonthlyCharges', 'TotalCharges_replaced'], dtype='object') -> (5634, 3)
+2026-02-05 14:17:56,229 - INFO -  After: Index(['tenure', 'MonthlyCharges', 'TotalCharges_replaced'], dtype='object') -> (1409, 3)

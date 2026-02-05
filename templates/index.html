@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Customer Churn Prediction</title>
+
+<style>
+:root {
+  --grad1:#00c6ff;
+  --grad2:#0072ff;
+  --accent:#00f2fe;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"Poppins",sans-serif;
+  background:radial-gradient(circle at top,#1a2a6c,#000);
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:40px 0;
+  color:#fff;
+}
+
+.wrapper{
+  width:95%;
+  max-width:1200px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  border-radius:25px;
+  padding:40px;
+  box-shadow:0 25px 80px rgba(0,0,0,.6);
+}
+
+.header{text-align:center;margin-bottom:35px}
+.header h1{
+  font-size:38px;
+  font-weight:800;
+  background:linear-gradient(90deg,var(--grad1),var(--grad2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.section{margin-bottom:35px}
+.section-title{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:18px;
+  color:var(--accent);
+}
+
+/* SIM */
+.sim-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+.sim-card input{display:none}
+.sim-box{
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  background:rgba(255,255,255,.12);
+  cursor:pointer;
+  transition:.3s;
+}
+.sim-box:hover{transform:translateY(-6px)}
+.sim-card input:checked + .sim-box{
+  box-shadow:0 0 25px rgba(0,242,254,.8);
+  background:linear-gradient(135deg,rgba(0,242,254,.3),rgba(0,114,255,.3));
+}
+
+/* FORM */
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+label{
+  font-size:13px;
+  color:#ccc;
+  font-weight:600;
+}
+select,input{
+  width:100%;
+  margin-top:6px;
+  padding:12px;
+  border-radius:12px;
+  border:none;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+}
+select option{color:#000}
+select:focus,input:focus{
+  outline:none;
+  box-shadow:0 0 0 2px var(--accent);
+}
+
+/* BUTTON */
+.predict-btn{
+  margin-top:40px;
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:18px;
+  font-size:20px;
+  font-weight:800;
+  color:#fff;
+  cursor:pointer;
+  background:linear-gradient(90deg,var(--grad1),var(--grad2));
+}
+.predict-btn:hover{
+  box-shadow:0 0 35px rgba(0,242,254,.8);
+}
+
+/* RESULT */
+.result{
+  margin-top:35px;
+  padding:30px;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(67,233,123,.3),rgba(56,249,215,.3));
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.form-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){.form-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){
+  .form-grid,.sim-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+<div class="header">
+  <h1>Customer Churn Prediction</h1>
+</div>
+
+<form method="POST" action="/predict">
+
+<!-- SIM -->
+<div class="section">
+  <div class="section-title">Step 1 · SIM Provider</div>
+  <div class="sim-grid">
+    <label class="sim-card"><input type="radio" name="SIM_Provider" value="Jio" required><div class="sim-box">JIO</div></label>
+    <label class="sim-card"><input type="radio" name="SIM_Provider" value="Airtel"><div class="sim-box">AIRTEL</div></label>
+    <label class="sim-card"><input type="radio" name="SIM_Provider" value="BSNL"><div class="sim-box">BSNL</div></label>
+  </div>
+</div>
+
+<!-- DETAILS -->
+<div class="section">
+<div class="section-title">Step 2 · Customer Details</div>
+<div class="form-grid">
+
+<div><label>Gender</label><select name="gender" required><option disabled selected>Select</option><option>Male</option><option>Female</option></select></div>
+<div><label>Senior Citizen</label><select name="SeniorCitizen" required><option disabled selected>Select</option><option value="0">No</option><option value="1">Yes</option></select></div>
+<div><label>Partner</label><select name="Partner" required><option disabled selected>Select</option><option>Yes</option><option>No</option></select></div>
+<div><label>Dependents</label><select name="Dependents" required><option disabled selected>Select</option><option>Yes</option><option>No</option></select></div>
+
+<div><label>Tenure</label><input type="number" name="tenure" required></div>
+<div><label>Phone Service</label><select name="PhoneService" required><option disabled selected>Select</option><option>Yes</option><option>No</option></select></div>
+<div><label>Multiple Lines</label><select name="MultipleLines" required><option>No phone service</option><option>No</option><option>Yes</option></select></div>
+<div><label>Internet Service</label><select name="InternetService" required><option>DSL</option><option>Fiber optic</option><option>No</option></select></div>
+
+<div><label>Online Security</label><select name="OnlineSecurity" required><option>No internet service</option><option>No</option><option>Yes</option></select></div>
+<div><label>Online Backup</label><select name="OnlineBackup" required><option>No internet service</option><option>No</option><option>Yes</option></select></div>
+<div><label>Device Protection</label><select name="DeviceProtection" required><option>No internet service</option><option>No</option><option>Yes</option></select></div>
+<div><label>Tech Support</label><select name="TechSupport" required><option>No internet service</option><option>No</option><option>Yes</option></select></div>
+
+<div><label>Streaming TV</label><select name="StreamingTV" required><option>No internet service</option><option>No</option><option>Yes</option></select></div>
+<div><label>Streaming Movies</label><select name="StreamingMovies" required><option>No internet service</option><option>No</option><option>Yes</option></select></div>
+<div><label>Contract</label><select name="Contract" required><option>Month-to-month</option><option>One year</option><option>Two year</option></select></div>
+<div><label>Paperless Billing</label><select name="PaperlessBilling" required><option>Yes</option><option>No</option></select></div>
+
+<div><label>Payment Method</label><select name="PaymentMethod" required><option>Electronic check</option><option>Mailed check</option><option>Bank transfer (automatic)</option><option>Credit card (automatic)</option></select></div>
+<div><label>Monthly Charges</label><input type="number" step="0.01" name="MonthlyCharges" required></div>
+<div><label>Total Charges</label><input type="number" step="0.01" name="TotalCharges" required></div>
+
+</div>
+</div>
+
+<button class="predict-btn" type="submit">Predict Churn</button>
+
+</form>
+
+{% if prediction_text %}
+<div class="result">
+  <h2>{{ prediction_text }}</h2>
+</div>
+{% endif %}
+
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+2026-02-05 14:17:56,077 - INFO - Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_replaced'], dtype='object') -> (5634, 4)
+2026-02-05 14:17:56,077 - INFO - Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_replaced'], dtype='object') -> (1409, 4)
+2026-02-05 14:17:56,092 - INFO - Index(['SeniorCitizen_minmax_trim', 'tenure_minmax_trim',
+       'MonthlyCharges_minmax_trim', 'TotalCharges_replaced_minmax_trim'],
+      dtype='object') -> (5634, 4)
+2026-02-05 14:17:56,092 - INFO - Index(['SeniorCitizen_minmax_trim', 'tenure_minmax_trim',
+       'MonthlyCharges_minmax_trim', 'TotalCharges_replaced_minmax_trim'],
+      dtype='object') -> (1409, 4)
